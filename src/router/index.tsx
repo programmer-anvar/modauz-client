@@ -9,6 +9,11 @@ import Products from '../pages/Products'
 import ProductDetail from '../pages/ProductDetail'
 import Cart from '../pages/Cart'
 import Dashboard from '../pages/Admin/Dashboard'
+import AdminProducts from '../pages/Admin/Products'
+import AdminOrders from '../pages/Admin/Orders'
+import Checkout from '../pages/Checkout'
+import Orders from '../pages/Orders'
+import Profile from '../pages/Profile'
 
 // ========================
 // Protected Route
@@ -71,6 +76,46 @@ const router = createBrowserRouter([
   element: (
     <ProtectedRoute>
       <Dashboard />
+    </ProtectedRoute>
+  )
+},
+{
+  path: '/admin/products',
+  element: (
+    <ProtectedRoute>
+      <AdminProducts />
+    </ProtectedRoute>
+  )
+},
+{
+  path: '/admin/orders',
+  element: (
+    <ProtectedRoute>
+      <AdminOrders />
+    </ProtectedRoute>
+  )
+},
+{
+  path: '/checkout',
+  element: (
+    <ProtectedRoute>
+      <Checkout />
+    </ProtectedRoute>
+  )
+},
+{
+  path: '/orders',
+  element: (
+    <ProtectedRoute>
+      <Orders />
+    </ProtectedRoute>
+  )
+},
+{
+  path: '/profile',
+  element: (
+    <ProtectedRoute>
+      <Profile />
     </ProtectedRoute>
   )
 }
