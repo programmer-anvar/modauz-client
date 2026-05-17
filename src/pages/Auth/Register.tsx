@@ -45,7 +45,7 @@ const Register = () => {
         toast.success("muvafaqyatli ro'yxatdan o'tdingiz!")
         navigate('/')
     } catch (error) {
-        toast.error(error.response?.data?.message || 'Xato yuz berdi!')
+        toast.error((error as any).response?.data?.message || 'Xato yuz berdi!')
     }
     setLoading(false);
   }

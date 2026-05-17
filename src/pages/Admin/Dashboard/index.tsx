@@ -34,7 +34,6 @@ const Dashboard = () => {
   // Statistikalar
   const totalRevenue = orders.reduce((sum, o) => sum + o.totalPrice, 0)
   const newOrders = orders.filter(o => o.status === 'yangi').length
-  const deliveredOrders = orders.filter(o => o.status === 'yetkazildi').length
 
   // So'nggi 5 ta buyurtma
   const recentOrders = orders.slice(0, 5)
